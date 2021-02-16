@@ -27,8 +27,17 @@
 var socket = io(); //소켓 접속 ex) var socket = io("http:naver.com"); 다른 사이트와도 연결 가능
 
 socket.on('server message', function(data){ //서버 메시지로 대기
-    $('#chatLog').append('<li> '+ data.message + ' </li>');
+    $('#chatLog').append('<li> '+ data.username +' : '+ data.message + ' </li>');
 });
+
+socket.on('join', function(data){ // 방 입장 대기
+    $('#chatLog').append('<li> ' + data.username + '님이 방을 들어왔습니다 </li>');
+});
+
+socket.on('leave', function(data){ // 방 퇴장 
+    $('#chatLog').append('<li> ' + data.username + '님이 방을 나갔습니다 </li>');
+});
+
 
 $(document).ready(function(){
     $('#sendForm').submit(function(){ // 메시지를 뿌림 emit

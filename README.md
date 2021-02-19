@@ -11,4 +11,5 @@
 	     
 	서버 확장 고려
 	 - Docker
-	 - Redis
+	 - Redis 사용한 션 공유
+	

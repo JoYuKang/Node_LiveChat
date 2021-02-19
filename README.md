@@ -13,3 +13,7 @@
 	 - Docker
 	 - Redis 사용한 션 공유
 	
+	
+	docker-compose build
+	
+	docker-compose up

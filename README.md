@@ -1,4 +1,4 @@
-# node online 채팅 프로젝트
+# node live chat
 	
 	
 	사용 npm
